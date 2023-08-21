@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { remove, add, getContacts, setFilter } from 'redux/reducer';
+import { remove, getContacts, setFilter } from 'redux/reducer';
 
 const ContactList = () => {
   const contacts = useSelector(getContacts);
@@ -13,7 +13,7 @@ const ContactList = () => {
 
   useEffect(() => {
     filterContacts(searchValue);
-  }, [contactList, searchValue]);
+  }, [contactList, filter, searchValue]);
 
   const handleInput = elem => {
     const value = elem.target.value;
