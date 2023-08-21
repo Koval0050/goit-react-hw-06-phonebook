@@ -14,7 +14,8 @@ const ContactList = () => {
 
   useEffect(() => {
     filterContacts(searchValue);
-  }, [contactList, filter, searchValue]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [contactList, searchValue]);
 
   const handleInput = elem => {
     const value = elem.target.value;
