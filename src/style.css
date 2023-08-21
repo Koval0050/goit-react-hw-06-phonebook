@@ -50,7 +50,7 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 15px;
-  align-items: start;
+  align-items: flex-start;
 }
 .contact-list {
   border: 1px solid black;
@@ -58,7 +58,7 @@ li {
   width: 350px;
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
