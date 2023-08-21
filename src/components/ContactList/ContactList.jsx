@@ -7,6 +7,7 @@ const ContactList = () => {
   const contactList = contacts.data;
 
   const dispatch = useDispatch();
+  const filter = useSelector(state => state.filter);
 
   const [searchValue, setSearchValue] = useState('');
   const [filteredContacts, setFilteredContacts] = useState(contactList);
@@ -26,8 +27,6 @@ const ContactList = () => {
     dispatch(remove(id));
     filterContacts(searchValue);
   };
-
-  const filter = useSelector(state => state.filter);
 
   const filterContacts = value => {
     const newFilteredContacts = contactList.filter(contact =>
